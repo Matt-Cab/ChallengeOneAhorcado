@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/alura-logo.svg" type="image/x-icon">
+    <title>Ahorcado - Challenge Alura - Oracle ONE</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/btns-styles.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <!-- SCRIPTS -->
+    <script defer src="./js/add-word.js"></script>
+    <script defer src="./js/canvas.js"></script>
+    <script defer src="./js/modal.js"></script>
+    <script defer src="./js/game.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+    <a href="https://www.aluracursos.com/" target="_blank">
+        <img class="logo" src="./assets/alura-logo.svg" alt="logo de alura">
+    </a>
+    <section class="" id="startSection">
+        <button class="btn dark-blue white-clr" id="startGame">Iniciar Juego</button>
+        <button class="btn dark-border dark-blue-clr" id="addWord">Agregar nueva palabra</button>
+    </section>
+    <section class="invisible" id="addWordSection">
+        <input id="newWordInput" type="text" maxlength="8" placeholder="Ingrese una palabra">
+        <div class="sub-container">
+            <p class="info"><img class="info-sign" src="./assets/info-sign.svg" alt="info sign"> <span class="info-text">Máx. de 8 letras</span></p>
+            <div class="btns-container">
+                <button class="btn dark-blue white-clr" id="saveAndStart">Guardar y empezar</button>
+                <button class="btn dark-border dark-blue-clr" id="cancel">Cancelar</button>
+            </div>
+        </div>
+    </section>
+    <section class="invisible" id="gameSection">
+        <div class="canvas-container">
+            <canvas id="drawing" width="320" height="400"></canvas>
+            <canvas id="letters" width="320"></canvas>
+        </div>
+        <div class="btns-container">
+            <button class="btn dark-blue white-clr" id="newGame">Nuevo juego</button>
+            <button class="btn dark-border dark-blue-clr" id="giveUp">Desistir</button>
+        </div>
+        <input id="hiddenInput" type="text">
+    </section>
+</body>
+
+</html>

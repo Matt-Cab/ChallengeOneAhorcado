@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg-color: #F3F5FC;
+    --dark-blue: #0A3871;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 84px;
+    z-index: 100;
+    transition: filter .3s;
+}
+
+.logo:hover {
+    filter: brightness(1.5);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .2s;
+    position: absolute;
+    inset: 0;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+canvas {
+    display: block;
+}
+
+#addWordSection {
+    max-width: 688px;
+    margin-inline: auto;
+}
+
+#addWordSection .sub-container {
+    width: 100%;
+}
+
+#gameSection {
+    max-width: 688px;
+    margin-inline: auto;
+}
+
+#gameSection .canvas-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#newWordInput {
+    border: none;
+    padding: 5px;
+    width: 100%;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: transparent;
+    margin-bottom: 363px;
+    outline: none;
+    color: var(--dark-blue);
+}
+
+#newWordInput::placeholder {
+    color: var(--dark-blue);
+    opacity: 1;
+}
+
+#startGame {
+    margin-bottom: 38px;
+    height: 114px;
+    max-width: 317px;
+    width: 100%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#addWord {
+    height: 67px;
+    width: 280px;
+    font-size: 16px;
+}
+
+#hiddenInput {
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+    z-index: -5;
+}
+
+.info {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 17px;
+}
+
+.info-sign {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    position: relative;
+    top: 4px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        top: 74.72px;
+        left: 40px;
+    }
+
+    #startGame {
+        height: 105px;
+    }
+
+    #addWord {
+        width: 304px;
+    }
+
+    #addWordSection {
+        padding: 40px;
+        padding-top: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #gameSection {
+        /* justify-content: space-between; */
+        padding: 40px;
+        padding-top: 160px;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo {
+        top: 24px;
+        left: 16px;
+    }
+    
+    #startSection {
+        padding: 5px;
+    }
+    
+    #startGame {
+        margin-bottom: 16px;
+    }
+    
+    #addWord {
+        max-width: 278px;
+        width: 100%;
+    }
+    
+    #addWordSection {
+        padding: 152px 16px 24px;
+    }
+    
+    #gameSection {
+        padding: 16px;
+        /* padding-top: 100px; */
+    }
+
+    .btns-container {
+        flex-direction: column;
+    }
+}
